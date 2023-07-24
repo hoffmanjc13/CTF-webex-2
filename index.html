@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <head>
   <title>Test CTF Challenge</title>
+  <link rel = "stylesheet"
+    type = "text/css"
+    href = "stylesheet.css" />
 </head>
+
 <body>
+	<header id='header' style="background-color: #3a416f">
+		<div id='logo' itemscope itemtype='https://schema.org/Organization'>
+		  <img class='logoimg' src='logo.png' alt='Haha' width="60" height="60" />
+		</div>
+	</header>
+
 	<script>
 		function login_insecure() {
-			let username = document.getElementById("usr").value
-			let password = document.getElementById("pwd").value
-			if (username === "too_cool_4_security" && password === "password1234") {
-				console.log("success")
-				window.location.href = "success.html";
+			let username = document.getElementById("usr").value;
+			let password = document.getElementById("pwd").value;
+			if (username === "HamseyTheHammy" && password === "s0rb3t") {
+				window.location.href = "login.html";
 			} else {
-				console.log(hash("Squash"))
-				console.log(hash("7/21/1973"))
-				console.log(hash("Blue"))
+				var hidd = document.getElementById("hidden");
+				hidd.style.display = "block";
 			}
+
 		}
 	</script>
 
-	<form action="">
-		<label>Username</username>
-		<input id="usr" type="text" placeholder="Username" required>
-		<label>Password</username>
-		<input id="pwd" type="text" placeholder="Password" required>
-		<input class="submit" type="button" value="Login" onclick="login_insecure()">
-	</form>
+	<div class="login-form">
+		<label class="hidden" id="hidden" style="display:none">
+			Incorrect username or password
+		</label>
 
+		<div class="login-row">
+			<label>Username</username>
+			<input class="login-field" id="usr" type="text" placeholder="Username" required>
+		</div>
+		<div class="login-row">
+			<label>Password</username>
+			<input class="login-field" id="pwd" type="text" placeholder="Password" required>		
+		</div>
+		<input class="submit" type="button" value="Login" onclick="login_insecure()">
+	</div>
+
+	<footer id='footer' style="background-color: #10a3a2">
+		<p>Made by Julia Hoffman | . All rights reserved.</p>
+	  </footer>
+	
 </body>

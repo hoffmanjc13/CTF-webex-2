@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+  <title>Test CTF Challenge</title>
+  <link rel = "stylesheet"
+    type = "text/css"
+    href = "stylesheet.css" />
+</head>
+
+<body>
+	<header id='header' style="background-color: #3a416f">
+		<div id='logo' itemscope itemtype='https://schema.org/Organization'>
+		  <img class='logoimg' src='logo.png' alt='Haha' width="60" height="60" />
+		</div>
+	</header>
+
+	<script>
+		function login_insecure() {
+			let username = document.getElementById("usr").value;
+			let password = document.getElementById("pwd").value;
+			if (username === "HamseyTheHammy" && password === "s0rb3t") {
+				window.location.href = "login.html";
+			} else {
+				var hidd = document.getElementById("hidden");
+				hidd.style.display = "block";
+			}
+
+		}
+	</script>
+
+	<div class="login-form">
+		<h1>Login Sucess!</h1>
+        <h2>Meeting tonight at 10pm at the airstrip</h2>
+    </div>
+
+	<footer id='footer' style="background-color: #10a3a2">
+		<p>Made by Julia Hoffman | . All rights reserved.</p>
+	  </footer>
+	
+</body>
