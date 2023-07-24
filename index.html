@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+  <title>Test CTF Challenge</title>
+</head>
+<body>
+	<script>
+		function login_insecure() {
+			let username = document.getElementById("usr").value
+			let password = document.getElementById("pwd").value
+			if (username === "too_cool_4_security" && password === "password1234") {
+				console.log("success")
+				window.location.href = "success.html";
+			} else {
+				console.log(hash("Squash"))
+				console.log(hash("7/21/1973"))
+				console.log(hash("Blue"))
+			}
+		}
+	</script>
+
+	<form action="">
+		<label>Username</username>
+		<input id="usr" type="text" placeholder="Username" required>
+		<label>Password</username>
+		<input id="pwd" type="text" placeholder="Password" required>
+		<input class="submit" type="button" value="Login" onclick="login_insecure()">
+	</form>
+
+</body>
